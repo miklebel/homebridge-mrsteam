@@ -1,4 +1,7 @@
 {
+  "pluginAlias": "SteamlinxHomebridgeHomebridgePlugin",
+  "pluginType": "platform",
+  "singular": true,
   "schema": {
     "definitions": {
       "steams_obj": {

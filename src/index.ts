@@ -1,11 +1,11 @@
 import { API } from 'homebridge';
 
 import { PLATFORM_NAME } from './settings';
-import { MrSteamHomebridgePlatform } from './platform';
+import { SteamlinxHomebridgeHomebridgePlugin } from './platform';
 
 /**
  * This method registers the platform with Homebridge
  */
 export = (api: API) => {
-  api.registerPlatform(PLATFORM_NAME, MrSteamHomebridgePlatform);
+  api.registerPlatform(PLATFORM_NAME, SteamlinxHomebridgeHomebridgePlugin);
 };

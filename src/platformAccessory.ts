@@ -3,7 +3,7 @@ import { Service, PlatformAccessory, CharacteristicValue } from 'homebridge';
 
 import axios from 'axios';
 
-import { MrSteamHomebridgePlatform, SteamConfig } from './platform';
+import { SteamlinxHomebridgeHomebridgePlugin, SteamConfig } from './platform';
 
 enum CommandId {
   on = 'steam',
@@ -24,7 +24,7 @@ export class MrSteamPlatformAccessory {
   };
 
   constructor(
-    private readonly platform: MrSteamHomebridgePlatform,
+    private readonly platform: SteamlinxHomebridgeHomebridgePlugin,
     private readonly accessory: PlatformAccessory,
     private readonly deviceConfig: SteamConfig,
   ) {
