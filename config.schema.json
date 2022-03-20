@@ -1,16 +1,45 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
-  "pluginType": "platform",
-  "singular": true,
   "schema": {
+    "definitions": {
+      "steams_obj": {
+        "type": "object",
+        "title": "Mr Steams",
+        "properties": {
+          "VMAccessToken": {
+            "title": "Voice Monkey access token",
+            "type": "string",
+            "required": true,
+            "description": "Sign in to your account or open your welcome email to find your Voice Monkey access token."
+          },
+          "VMSecretToken": {
+            "title": "Voice Monkey secret token",
+            "type": "string",
+            "required": true,
+            "description": "Sign in to your account or open your welcome email to find your Voice Monkey secret token."
+          },
+          "DeviceName": {
+            "title": "Name",
+            "type": "string",
+            "required": true,
+            "description": "Name your device."
+          }
+        }
+      }
+    },
     "type": "object",
     "properties": {
-      "name": {
-        "title": "Name",
-        "type": "string",
-        "required": true,
-        "default": "Example Dynamic Platform"
+      "steams": {
+        "title": "Mr Steams (required—min 1)",
+        "type": "array",
+        "minItems": 1,
+        "items": {
+          "$ref": "#/definitions/steams_obj",
+          "extendRefs": true
+        }
       }
-    }
+    },
+    "required": [
+      "steams"
+    ]
   }
 }
